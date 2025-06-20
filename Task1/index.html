@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Image Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Welcome to Image Gallery</h1>
+
+<div class="filter-buttons">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('cartoon')">Cartoon</button>
+  <button onclick="filterImages('animals')">Animals</button>
+</div>
+
+<h2 id="text">What image you want to see!!</h2>
+
+<div class="gallery" id="gallery">
+  <div class="gallery-item nature">
+    <img src="download.jpeg" alt="Nature 1">
+  </div>
+  <div class="gallery-item cartoon">
+    <img src="cartoon1.jpeg" alt="Cartoon 1">
+  </div>
+  <div class="gallery-item animals">
+    <img src="animal2.jpeg" alt="Dog">
+  </div>
+  <div class="gallery-item nature">
+    <img src="nature2.jpeg" alt="Nature 2">
+  </div>
+  <div class="gallery-item cartoon">
+    <img src="cartoon2.jpeg" alt="Cartoon 2">
+  </div>
+  <div class="gallery-item animals">
+    <img src="animal1.jpeg" alt="Cat">
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <span class="nav prev" onclick="changeImage(-1)">❮</span>
+  <img id="lightbox-img" src="download.jpg" alt="Lightbox View">
+  <span class="nav next" onclick="changeImage(1)">❯</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
