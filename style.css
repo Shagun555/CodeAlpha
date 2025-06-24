@@ -1,0 +1,105 @@
+/* Body & background */
+body {
+  background: linear-gradient(135deg, #06186b, #afc0c5, #06186b);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Calculator */
+.calculator {
+  background: rgba(31, 31, 31, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  width: 90%;
+  max-width: 400px;
+}
+
+.display {
+  background: #222;
+  color: #0f0;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  overflow: auto;
+  min-height: 60px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+ 
+}
+
+button:hover {
+  background: #666;
+}
+
+.operator {
+  background: #0077ff;
+}
+
+.equal {
+  background: #00b300;
+  grid-column: span 2;
+}
+
+.clear {
+  background: #e60000;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .display {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Background Stickers */
+.background-stickers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Common style for all stickers */
+.sticker {
+  position: absolute;
+  font-size: 3rem;
+  color:white
+}
+
+/* Specific placements */
+.sticker.one    { top: 10%; left: 8%; }
+.sticker.two    { top: 20%; right: 10%; }
+.sticker.three  { bottom: 20%; left: 15%; }
+.sticker.four   { top: 65%; right: 8%; }
